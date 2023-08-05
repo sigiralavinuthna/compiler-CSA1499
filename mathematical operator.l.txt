@@ -1,0 +1,35 @@
+%%
+int main()
+{
+yylex();
+}
+void eval()
+{
+switch(oper)
+{
+case '+':
+ans=op1+op2;
+break;
+case '-':
+ans=op1-op2;
+break;
+case '*':
+ans=op1*op2;
+break;
+case '/':
+if(op2==0)
+{
+printf("ERROR");
+return;
+}
+else
+{
+ans=op1/op2;
+}
+break;
+default:
+printf("operation not available");
+break;
+}
+printf("The answer is = %lf",ans);
+}
